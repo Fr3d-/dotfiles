@@ -19,8 +19,10 @@ set ttimeoutlen=0
 " Close preview window after completion
 autocmd CompleteDone * pclose
 
-let mapleader = "," " Our mapldear is ,
+let mapleader = "," " Our mapleader is ,
 
+" Assigning env variables
+let mydevice=$MYDEVICE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              Hotkeys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -39,8 +41,16 @@ color wombat256mod
 " :highlight CursorLineNr ctermfg=lightgrey ctermbg=black
 
 let g:airline_powerline_fonts = 1
-let g:airline_theme='molokai'
 
+if mydevice == "main"
+	let g:airline_theme='bubblegum'
+elseif 	mydevice == "laptop"
+	let g:airline_theme='molokai'
+endif
+
+" https://github.com/vim-airline/vim-airline/issues/1125
+" Makes sure airline doesn't get screwed because of preview windows.
+let g:airline_exclude_preview = 1
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              Plugins
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
