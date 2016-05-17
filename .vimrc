@@ -26,6 +26,12 @@ let mydevice=$MYDEVICE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              Hotkeys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Shifted homerow one key to the left, so it matched my resting position
+noremap æ l
+noremap l k
+noremap k j
+noremap j h
+
 nmap <leader>ne :NERDTreeToggle<cr>
 autocmd Filetype python nnoremap <leader>b :update<Bar>execute '!clear && python3.4 '.shellescape(@%, 1)<CR>
 autocmd FileType tex nnoremap <leader>b :update<CR>:Latexmk<CR>
