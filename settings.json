@@ -1,0 +1,86 @@
+{
+    // Theme
+    "workbench.iconTheme": "vs-seti",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.fontSize": 13,
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "editor.fontFamily": "Source Code Pro",
+    "editor.fontSize": 13,
+    "editor.wordWrap": "wordWrapColumn",
+
+    // Intellisense
+    "[cpp]": {
+        "editor.quickSuggestions": true
+    },
+    "[c]": {
+        "editor.quickSuggestions": true
+    },
+
+    // Vim
+    "vim.leader": " ", // Leader is <space>
+    "vim.useCtrlKeys": false,
+    "vim.otherModesKeyBindingsNonRecursive": [
+        {
+            "before": ["u"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "undo"
+                }
+            ]
+        },
+        {
+            "before": [":"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.showCommands",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "b"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.tasks.build",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "p"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.actions.view.problems",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "t"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.terminal.toggleTerminal",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "g"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.focusActiveEditorGroup",
+                    "args": []
+                }
+            ]
+        }
+
+    ],
+    "vim.easymotion": true 
+}
