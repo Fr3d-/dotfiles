@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 
-code --install-extension ms-vscode.cpptools ms-vscode.csharp vscodevim.vim
+extensions=("ms-vscode.cpptools" "ms-vscode.csharp" "vscodevim.vim")
+
+for i in "${extensions[@]}"
+do
+	code --install-extension $i
+done
