@@ -1,9 +1,19 @@
 // Place your key bindings in this file to overwrite the defaults
-[{
-    "key": "ctrl+shift+t",
-    "command": "workbench.action.terminal.toggleTerminal"
-},
-{
-    "key": "ctrl+shift+p",
-    "command": "workbench.actions.view.problems"
-}]
+[
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+shift+p",
+        "command": "workbench.actions.view.problems"
+    },
+    {
+        "key": "ctrl+shift+o",
+        "command": "workbench.action.output.toggleOutput"
+    },
+    {
+        "key": "ctrl+g",
+        "command": "workbench.action.focusActiveEditorGroup"
+    }
+]

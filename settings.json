@@ -8,6 +8,11 @@
     "editor.fontFamily": "Source Code Pro",
     "editor.fontSize": 13,
     "editor.wordWrap": "wordWrapColumn",
+    "workbench.experimental.colorCustomizations": {
+        "statusBarBackground" : "#007ACC",
+        "statusBarNoFolderBackground" : "#10192B",
+        "statusBarDebuggingBackground": "#511f1f"
+    },
 
     // Intellisense
     "[cpp]": {
@@ -71,16 +76,28 @@
             ]
         },
         {
+            "before": ["leader", "s"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "workbench.action.gotoSymbol",
+                    "args": []
+                }
+            ]
+        },
+        {
             "before": ["leader", "g"],
             "after": [],
             "commands": [
                 {
-                    "command": "workbench.action.focusActiveEditorGroup",
+                    "command": "workbench.action.gotoSymbol",
                     "args": []
                 }
             ]
         }
 
+
     ],
-    "vim.easymotion": true 
+    "vim.easymotion": true,
+    "editor.codeLens": false
 }

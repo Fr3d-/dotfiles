@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+ln -s ~/Git/dotfiles/settings.json ~/.config/Code/User
+ln -s ~/Git/dotfiles/keybindings.json ~/.config/Code/User
+
 extensions=("ms-vscode.cpptools" "ms-vscode.csharp" "vscodevim.vim")
 
 for i in "${extensions[@]}"
