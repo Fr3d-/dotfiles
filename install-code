@@ -3,7 +3,7 @@
 ln -s ~/Git/dotfiles/settings.json ~/.config/Code/User
 ln -s ~/Git/dotfiles/keybindings.json ~/.config/Code/User
 
-extensions=("ms-vscode.cpptools" "ms-vscode.csharp" "vscodevim.vim")
+extensions=("ms-vscode.cpptools" "ms-vscode.csharp" "vscodevim.vim", "donjayamanne.python", "Ionide.Ionide-fsharp")
 
 for i in "${extensions[@]}"
 do
