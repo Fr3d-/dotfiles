@@ -5,7 +5,7 @@
         "command": "workbench.action.terminal.toggleTerminal"
     },
     {
-        "key": "ctrl+shift+p",
+        "key": "ctrl+shift+r",
         "command": "workbench.actions.view.problems"
     },
     {
@@ -15,5 +15,9 @@
     {
         "key": "ctrl+g",
         "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+        "key": "ctrl+shift+c",
+        "command": "workbench.debug.action.toggleRepl"
     }
 ]
