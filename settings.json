@@ -15,12 +15,7 @@
     },
 
     // Intellisense
-    "[cpp]": {
-        "editor.quickSuggestions": true
-    },
-    "[c]": {
-        "editor.quickSuggestions": true
-    },
+    "editor.codeLens": false,
 
     // Vim
     "vim.leader": " ", // Leader is <space>
@@ -86,11 +81,11 @@
             ]
         },
         {
-            "before": ["leader", "g"],
+            "before": ["leader", "f"],
             "after": [],
             "commands": [
                 {
-                    "command": "workbench.action.gotoSymbol",
+                    "command": "workbench.action.gotoFile",
                     "args": []
                 }
             ]
@@ -99,5 +94,18 @@
 
     ],
     "vim.easymotion": true,
-    "editor.codeLens": false
+
+    // UI
+    "workbench.activityBar.visible": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "*.swp": true,
+        "*.fuse_*": true,
+        "*.o": true,
+        "prog": true
+    }
 }
