@@ -2,7 +2,7 @@
 [
     {
         "key": "ctrl+shift+t",
-        "command": "workbench.action.terminal.toggleTerminal"
+        "command": "workbench.action.terminal.focus"
     },
     {
         "key": "ctrl+shift+r",
@@ -19,5 +19,10 @@
     {
         "key": "ctrl+shift+c",
         "command": "workbench.debug.action.toggleRepl"
+    }, // workbench.action.tasks.runTask
+    {
+        "key": "f5",
+        "command": "fsi.SendFile",
+        "when": "!inDebugMode && editorLangId == 'fsharp'"
     }
 ]
