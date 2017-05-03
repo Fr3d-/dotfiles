@@ -7,7 +7,7 @@
     "workbench.colorTheme": "Visual Studio Dark",
     "editor.fontFamily": "Source Code Pro",
     "editor.fontSize": 13,
-    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrap": "on",
     "workbench.experimental.colorCustomizations": {
         "statusBarBackground" : "#007ACC",
         "statusBarNoFolderBackground" : "#10192B",
@@ -89,7 +89,28 @@
                     "args": []
                 }
             ]
+        },
+        {
+            "before": ["leader", "j"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.insertCursorBelow",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "k"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "editor.action.insertCursorAbove",
+                    "args": []
+                }
+            ]
         }
+
 
 
     ],
@@ -107,5 +128,14 @@
         "*.fuse_*": true,
         "*.o": true,
         "prog": true
-    }
+    },
+    "[cpp]": {
+        "editor.quickSuggestions": false
+    },
+    "[c]": {
+        "editor.quickSuggestions": false
+    },
+    "files.hotExit": "onExitAndWindowClose",
+    "window.reopenFolders": "all",
+    "terminal.integrated.scrollback": 3000
 }
