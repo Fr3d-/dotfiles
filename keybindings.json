@@ -1,5 +1,7 @@
 // Place your key bindings in this file to overwrite the defaults
 [
+    // ctrl+b -> hide left
+    // ctrl+j -> hide bottom
     {
         "key": "ctrl+shift+t",
         "command": "workbench.action.terminal.focus"
@@ -24,5 +26,10 @@
         "key": "f5",
         "command": "fsi.SendFile",
         "when": "!inDebugMode && editorLangId == 'fsharp'"
+    },
+    {
+        "key": "f5",
+        "command": "latex-workshop.build",
+        "when": "!inDebugMode && editorLangId == 'latex'"
     }
 ]

@@ -8,7 +8,7 @@
     "editor.fontFamily": "Source Code Pro",
     "editor.fontSize": 13,
     "editor.wordWrap": "on",
-    "workbench.experimental.colorCustomizations": {
+    "workbench.colorCustomizations": {
         "statusBarBackground" : "#007ACC",
         "statusBarNoFolderBackground" : "#10192B",
         "statusBarDebuggingBackground": "#511f1f"
@@ -17,7 +17,12 @@
     // Intellisense
     "editor.codeLens": false,
 
+    // Controls
+    "editor.multiCursorModifier": "ctrlCmd",
+
     // Vim
+    "vim.disableAnnoyingNeovimMessage": true,
+
     "vim.leader": " ", // Leader is <space>
     "vim.useCtrlKeys": false,
     "vim.otherModesKeyBindingsNonRecursive": [
@@ -129,13 +134,27 @@
         "*.o": true,
         "prog": true
     },
-    "[cpp]": {
-        "editor.quickSuggestions": false
-    },
-    "[c]": {
-        "editor.quickSuggestions": false
-    },
+
     "files.hotExit": "onExitAndWindowClose",
-    "window.reopenFolders": "all",
-    "terminal.integrated.scrollback": 3000
+    "window.reopenFolders": "none",
+    "terminal.integrated.scrollback": 3000,
+    "extensions.autoUpdate": false,
+    "window.enableMenuBarMnemonics": false,
+
+    // Latex
+    // Add shellescape to toolchain
+    // required by minted
+    "latex-workshop.latex.toolchain": [
+        {
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "-pdf",
+                "%DOC%"
+            ]
+        }
+    ]
 }
