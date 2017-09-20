@@ -3,28 +3,45 @@
     // ctrl+b -> hide left
     // ctrl+j -> hide bottom
     {
-        "key": "ctrl+shift+t",
-        "command": "workbench.action.terminal.focus"
+        "key": "alt+g",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "!editorFocus"
     },
     {
-        "key": "ctrl+shift+r",
+        "key": "alt+g",
+        "command": "workbench.action.focusPanel",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+h", //problemFocus
         "command": "workbench.actions.view.problems"
     },
     {
-        "key": "ctrl+shift+o",
+        "key": "alt+h",
+        "command": "workbench.actions.view.problems"
+    },
+    {
+        "key": "alt+j",
         "command": "workbench.action.output.toggleOutput"
     },
+
     {
-        "key": "ctrl+g",
-        "command": "workbench.action.focusActiveEditorGroup"
-    },
-    {
-        "key": "ctrl+shift+c",
+        "key": "alt+k",
         "command": "workbench.debug.action.toggleRepl"
     }, // workbench.action.tasks.runTask
     {
+        "key": "alt+l",
+        "command": "workbench.action.terminal.focus",
+        "when": "!terminalFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "terminalFocus"
+    },
+    {
         "key": "f5",
-        "command": "fsi.SendFile",
+        "command": "fsi.Start",
         "when": "!inDebugMode && editorLangId == 'fsharp'"
     },
     {

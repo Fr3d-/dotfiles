@@ -4,7 +4,6 @@
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.fontSize": 13,
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Visual Studio Dark",
     "editor.fontFamily": "Source Code Pro",
     "editor.fontSize": 13,
     "editor.wordWrap": "on",
@@ -16,9 +15,6 @@
 
     // Intellisense
     "editor.codeLens": false,
-
-    // Controls
-    "editor.multiCursorModifier": "ctrlCmd",
 
     // Vim
     "vim.disableAnnoyingNeovimMessage": true,
@@ -50,7 +46,7 @@
             "after": [],
             "commands": [
                 {
-                    "command": "workbench.action.tasks.build",
+                    "command": "editor.debug.action.toggleBreakpoint",
                     "args": []
                 }
             ]
@@ -135,11 +131,17 @@
         "prog": true
     },
 
+    // General
     "files.hotExit": "onExitAndWindowClose",
     "window.reopenFolders": "none",
     "terminal.integrated.scrollback": 3000,
-    "extensions.autoUpdate": false,
+
+    // Controls
     "window.enableMenuBarMnemonics": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+
+    // Extensions
+    "extensions.autoUpdate": false,
 
     // Latex
     // Add shellescape to toolchain
@@ -156,5 +158,70 @@
                 "%DOC%"
             ]
         }
-    ]
+    ],
+
+    // Spellchecker -- added words
+    "cSpell.userWords": [
+        "keyhandling"
+    ],
+    "FSharp.fsiFilePath": "/usr/bin/fsharpi",
+    "FSharp.fsiExtraParameters": ["--use:main.fsx"],
+
+    "macros": {
+        "fsi": [
+            "fsi.SendFile"
+        ]
+    },
+    "terminal.integrated.commandsToSkipShell": [
+        "editor.action.toggleTabFocusMode",
+        "workbench.action.debug.continue",
+        "workbench.action.debug.pause",
+        "workbench.action.debug.restart",
+        "workbench.action.debug.run",
+        "workbench.action.debug.start",
+        "workbench.action.debug.stop",
+        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.focusFirstEditorGroup",
+        "workbench.action.focusSecondEditorGroup",
+        "workbench.action.focusThirdEditorGroup",
+        "workbench.action.openNextRecentlyUsedEditorInGroup",
+        "workbench.action.openPreviousRecentlyUsedEditorInGroup",
+        "workbench.action.quickOpen",
+        "workbench.action.showCommands",
+        "workbench.action.terminal.clear",
+        "workbench.action.terminal.copySelection",
+        "workbench.action.terminal.focus",
+        "workbench.action.terminal.focusAtIndex1",
+        "workbench.action.terminal.focusAtIndex2",
+        "workbench.action.terminal.focusAtIndex3",
+        "workbench.action.terminal.focusAtIndex4",
+        "workbench.action.terminal.focusAtIndex5",
+        "workbench.action.terminal.focusAtIndex6",
+        "workbench.action.terminal.focusAtIndex7",
+        "workbench.action.terminal.focusAtIndex8",
+        "workbench.action.terminal.focusAtIndex9",
+        "workbench.action.terminal.focusNext",
+        "workbench.action.terminal.focusPrevious",
+        "workbench.action.terminal.kill",
+        "workbench.action.terminal.new",
+        "workbench.action.terminal.paste",
+        "workbench.action.terminal.runActiveFile",
+        "workbench.action.terminal.runSelectedText",
+        "workbench.action.terminal.scrollDown",
+        "workbench.action.terminal.scrollDownPage",
+        "workbench.action.terminal.scrollToBottom",
+        "workbench.action.terminal.scrollToTop",
+        "workbench.action.terminal.scrollUp",
+        "workbench.action.terminal.scrollUpPage",
+        "workbench.action.terminal.toggleTerminal",
+        "workbench.actions.view.problems",
+        "workbench.action.output.toggleOutput",
+        "workbench.debug.action.toggleRepl"
+    ],
+    "python.linting.pylintArgs": [
+        "--errors-only"
+    ],
+    "workbench.colorTheme": "One Dark Pro Vivid",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "editor.minimap.enabled": false
 }
