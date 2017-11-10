@@ -1,10 +1,14 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              General
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype plugin indent on
 set tabstop=4
 set shiftwidth=4
+set expandtab
 "set list "Show invisible characters
 "set listchars=tab:▸\ ,eol:¬ "Which are tabs and end of lines.
+
+set encoding=utf-8
 
 set number                     " Show current line number
 "set relativenumber             " Show relative line numbers
@@ -26,11 +30,6 @@ let mydevice=$MYDEVICE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              Hotkeys
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Shifted homerow one key to the left, so it matched my resting position
-noremap æ l
-noremap l k
-noremap k j
-noremap j h
 
 nmap <leader>ne :NERDTreeToggle<cr>
 autocmd Filetype python nnoremap <leader>b :update<Bar>execute '!clear && python3.4 '.shellescape(@%, 1)<CR>
@@ -71,13 +70,14 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'latex-box-team/latex-box'
 Plugin 'scrooloose/nerdtree'
+" Add Syntastic plugin here "
+Plugin 'scrooloose/syntastic'
+
+Plugin 'fsharp/vim-fsharp'
 Bundle 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Bundle 'edkolev/tmuxline.vim'
-Plugin 'valloric/youcompleteme'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -87,5 +87,6 @@ let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/.ycm_extra_conf.py"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "                              Other
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufNewFile,BufRead *.x64 set syntax=ia64
 " This doesn't work if it's put higher up.
 set noshowmode

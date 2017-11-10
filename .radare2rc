@@ -6,3 +6,6 @@ e cmd.stack = true
 
 # Use UTF-8 to show cool arrows that do not look like crap :)
 e scr.utf8 = true
+
+e bin.demangle = true
+e asm.demangle = true

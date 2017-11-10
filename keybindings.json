@@ -45,8 +45,18 @@
         "when": "!inDebugMode && editorLangId == 'fsharp'"
     },
     {
+        "key": "f6",
+        "command": "fsi.SendFile",
+        "when": "!inDebugMode && editorLangId == 'fsharp'"
+    },
+    {
         "key": "f5",
         "command": "latex-workshop.build",
         "when": "!inDebugMode && editorLangId == 'latex'"
+    },
+    {
+        "key": "alt+n",
+        "command": "workbench.action.openNextRecentlyUsedEditorInGroup",
+        "when": ""
     }
 ]

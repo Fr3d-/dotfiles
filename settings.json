@@ -110,10 +110,27 @@
                     "args": []
                 }
             ]
+        },
+        {
+            "before": ["leader", "h"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "extension.vim_navigateLeft",
+                    "args": []
+                }
+            ]
+        },
+        {
+            "before": ["leader", "l"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "extension.vim_navigateRight",
+                    "args": []
+                }
+            ]
         }
-
-
-
     ],
     "vim.easymotion": true,
 
@@ -169,11 +186,14 @@
 
     "macros": {
         "fsi": [
+            "fsi.Start",
             "fsi.SendFile"
         ]
     },
     "terminal.integrated.commandsToSkipShell": [
         "editor.action.toggleTabFocusMode",
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.togglePanel",
         "workbench.action.debug.continue",
         "workbench.action.debug.pause",
         "workbench.action.debug.restart",
@@ -223,5 +243,6 @@
     ],
     "workbench.colorTheme": "One Dark Pro Vivid",
     "C_Cpp.intelliSenseEngine": "Default",
-    "editor.minimap.enabled": false
+    "editor.minimap.enabled": false,
+    "workbench.editor.openPositioning": "last"
 }
