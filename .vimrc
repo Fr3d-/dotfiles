@@ -72,7 +72,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 " Add Syntastic plugin here "
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 
 Plugin 'fsharp/vim-fsharp'
 Bundle 'bling/vim-airline'
@@ -82,6 +82,10 @@ Bundle 'edkolev/tmuxline.vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+" for tmuxline + vim-airline integration
+let g:airline#extensions#tmuxline#enabled = 1
+" " start tmuxline even without vim running
+let airline#extensions#tmuxline#snapshot_file = "~/.tmux-status.conf"
 
 let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/.ycm_extra_conf.py"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

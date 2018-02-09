@@ -39,16 +39,12 @@
         "command": "workbench.action.terminal.toggleTerminal",
         "when": "terminalFocus"
     },
+    /*
     {
         "key": "f5",
-        "command": "fsi.Start",
+        "command": "fsharp.debugDefaultProject",
         "when": "!inDebugMode && editorLangId == 'fsharp'"
-    },
-    {
-        "key": "f6",
-        "command": "fsi.SendFile",
-        "when": "!inDebugMode && editorLangId == 'fsharp'"
-    },
+    },*/
     {
         "key": "f5",
         "command": "latex-workshop.build",

@@ -7,20 +7,16 @@
     "editor.fontFamily": "Source Code Pro",
     "editor.fontSize": 13,
     "editor.wordWrap": "on",
-    "workbench.colorCustomizations": {
-        "statusBarBackground" : "#007ACC",
-        "statusBarNoFolderBackground" : "#10192B",
-        "statusBarDebuggingBackground": "#511f1f"
-    },
 
     // Intellisense
     "editor.codeLens": false,
-
-    // Vim
-    "vim.disableAnnoyingNeovimMessage": true,
+    "window.reopenFolders": "none",
 
     "vim.leader": " ", // Leader is <space>
     "vim.useCtrlKeys": false,
+    "vim.handleKeys": {
+        "<C-d>": false
+    },
     "vim.otherModesKeyBindingsNonRecursive": [
         {
             "before": ["u"],
@@ -130,6 +126,16 @@
                     "args": []
                 }
             ]
+        },
+        {
+            "before": ["leader", "r"],
+            "after": [],
+            "commands": [
+                {
+                    "command": "code-runner.run",
+                    "args": []
+                }
+            ]
         }
     ],
     "vim.easymotion": true,
@@ -150,7 +156,6 @@
 
     // General
     "files.hotExit": "onExitAndWindowClose",
-    "window.reopenFolders": "none",
     "terminal.integrated.scrollback": 3000,
 
     // Controls
@@ -177,19 +182,6 @@
         }
     ],
 
-    // Spellchecker -- added words
-    "cSpell.userWords": [
-        "keyhandling"
-    ],
-    "FSharp.fsiFilePath": "/usr/bin/fsharpi",
-    "FSharp.fsiExtraParameters": ["--use:main.fsx"],
-
-    "macros": {
-        "fsi": [
-            "fsi.Start",
-            "fsi.SendFile"
-        ]
-    },
     "terminal.integrated.commandsToSkipShell": [
         "editor.action.toggleTabFocusMode",
         "workbench.action.toggleSidebarVisibility",
@@ -242,7 +234,11 @@
         "--errors-only"
     ],
     "workbench.colorTheme": "One Dark Pro Vivid",
+    "window.menuBarVisibility": "hidden",
     "C_Cpp.intelliSenseEngine": "Default",
     "editor.minimap.enabled": false,
-    "workbench.editor.openPositioning": "last"
+    "workbench.editor.openPositioning": "last",
+    "python.pythonPath": "/usr/bin/python",
+    "workbench.statusBar.visible": true,
+    "FSharp.msbuildHost": ".net core",
 }
