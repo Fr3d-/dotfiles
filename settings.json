@@ -10,7 +10,7 @@
 
     // Intellisense
     "editor.codeLens": false,
-    "window.reopenFolders": "none",
+    "window.restoreWindows": "none",
 
     "vim.leader": " ", // Leader is <space>
     "vim.useCtrlKeys": false,
@@ -241,4 +241,6 @@
     "python.pythonPath": "/usr/bin/python",
     "workbench.statusBar.visible": true,
     "FSharp.msbuildHost": ".net core",
+    "workbench.statusBar.feedback.visible": false,
+    "extensions.ignoreRecommendations": false,
 }
