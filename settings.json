@@ -168,8 +168,9 @@
     // Latex
     // Add shellescape to toolchain
     // required by minted
-    "latex-workshop.latex.toolchain": [
+    "latex-workshop.latex.tools": [
         {
+            "name": "latexmk",
             "command": "latexmk",
             "args": [
                 "-synctex=1",
@@ -179,9 +180,25 @@
                 "-pdf",
                 "%DOC%"
             ]
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "%DOC%"
+            ]
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ]
         }
     ],
-
     "terminal.integrated.commandsToSkipShell": [
         "editor.action.toggleTabFocusMode",
         "workbench.action.toggleSidebarVisibility",
@@ -243,4 +260,6 @@
     "FSharp.msbuildHost": ".net core",
     "workbench.statusBar.feedback.visible": false,
     "extensions.ignoreRecommendations": false,
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.view.pdf.viewer": "tab"
 }
